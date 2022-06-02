@@ -1,18 +1,13 @@
+def fibonacci():
+  n2 = 1
+  n3 = 1
+  while True:
+    n1 = n2
+    n2 = n3
+    n3 = n1 + n2
+    yield n1
+
+a = fibonacci()
 while True:
-    try:
-        n = int(input("Enter the range:"))
-        i = 0
-        a = 0
-        b = 1
-    except ValueError:
-        print("Enter Number")
-    else:
-        while (i < n):
-            if (i <= 1):
-                c = i
-            else:
-                c = a + b
-                a = b
-                b = c
-            print(c)
-            i = i + 1
+  print(next(a), end=' ')
+  input()
